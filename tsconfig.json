@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es2020",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": false,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true
+  },
+  "exclude": ["node_modules/**"]
+}
