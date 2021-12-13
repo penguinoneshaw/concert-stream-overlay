@@ -1,16 +1,16 @@
-import { ConcertMetadata, PieceOrOtherState } from "./interfaces";
+import { ConcertMetadata, SharedState } from "./interfaces";
 import { Status } from "./interfaces/OBS";
 
 export interface ServerToClientEvents {
   withAck: (d: string, callback: (e: number) => void) => void;
   time: (date: Date) => void;
-  concertState: (state: PieceOrOtherState) => void;
+  concertState: (state: SharedState) => void;
   concertData: (metadata: ConcertMetadata) => void;
 }
 
 export interface ClientToServerEvents {
   obsState: (state: Status) => void;
-  slideState: (command: "next") => void;
+  slideState: (command: "next" | "previous" | string | number) => void;
 }
 
 export interface InterServerEvents {

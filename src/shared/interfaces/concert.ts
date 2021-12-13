@@ -1,11 +1,15 @@
-export interface OtherState {
-  type: string;
+export interface HasNotes {
+  notes?: string;
+}
+
+export interface OtherState extends HasNotes {
+  type: `State-${string}`;
   stream: string;
   controls: string;
 }
 
-export interface Piece {
-  type: "piece";
+export interface Piece extends HasNotes {
+  type: "piece" | undefined;
   title: string;
   subtitle?: string;
   composer?: string;
@@ -13,9 +17,16 @@ export interface Piece {
   lyrics?: string;
 }
 
+export type SharedState = Piece | OtherState;
+
 export interface Group {
   name: string;
   logo?: string;
+}
+
+export interface Charity {
+  name: string;
+  registrationNumber: string;
 }
 
 export interface ConcertMetadata {
@@ -25,11 +36,7 @@ export interface ConcertMetadata {
   date?: Date | string;
   description?: string[];
   price?: string;
-}
-
-export interface Charity {
-  name: string;
-  registrationNumber: string;
+  charity?: Charity[];
 }
 
 export interface Person {
@@ -44,10 +51,8 @@ export type Mapped<T, K extends keyof T, V extends keyof T> = T[K] extends
   ? Record<T[K], T[V]>
   : never;
 
-export type PieceOrOtherState = Piece | OtherState;
-
-export function isPiece(state: PieceOrOtherState | undefined): state is Piece {
-  return state?.type === "piece";
+export function isPiece(state: SharedState | undefined): state is Piece {
+  return state?.type === "piece" || (state != null && state.type === undefined);
 }
 
 export interface Concert
@@ -56,8 +61,7 @@ export interface Concert
   conductor: Person & {
     description: string[];
   };
-  charity: Charity[];
-  pieces: PieceOrOtherState[];
+  running_order: SharedState[];
   otherStates: Record<
     OtherState["type"],
     Pick<OtherState, "stream" | "controls">

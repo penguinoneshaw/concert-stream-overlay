@@ -6,7 +6,7 @@ import {
   Group,
   isPiece,
   Piece,
-  PieceOrOtherState,
+  SharedState,
 } from "../../shared/interfaces";
 import "./now_playing";
 
@@ -19,7 +19,7 @@ export class Presentation extends LitElement {
   public datetime: string | undefined;
 
   @property({ attribute: false, type: Object })
-  public currentState: PieceOrOtherState | undefined;
+  public currentState: SharedState | undefined;
 
   static styles = css`
     :host {
@@ -42,12 +42,53 @@ export class Presentation extends LitElement {
       height: 100%;
     }
 
-    overlay-nowplaying {
-      flex-grow: 1;
-    }
-
     .metadata {
       text-align: right;
+    }
+    .group-data {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 3rem 0 1.38rem;
+      font-family: var(--headings-font-stack);
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 3.052rem;
+    }
+
+    h2 {
+      font-size: 2.441rem;
+    }
+
+    h3 {
+      font-size: 1.953rem;
+    }
+
+    h4 {
+      font-size: 1.563rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    small,
+    .text_small {
+      font-size: 0.8rem;
     }
 
     header {
@@ -120,10 +161,10 @@ export class Presentation extends LitElement {
     `;
   }
 
-  private renderGroup(group: Group) {
-    if (group.logo) {
-      return html`<img src="${group.logo}" />`;
-    } else return group.name;
+  private renderGroup({ logo }: Group) {
+    if (logo) {
+      return html`<img src="${logo}" />`;
+    } else return undefined;
   }
 
   render() {
@@ -131,11 +172,28 @@ export class Presentation extends LitElement {
       ? this.renderGroup(this.metadata.group)
       : "";
 
+    const charity = Array.isArray(this.metadata?.charity)
+      ? html`<span>
+          Supporting:
+          ${this.metadata?.charity
+            .map(
+              ({ name, registrationNumber }) =>
+                `${name} (${registrationNumber})`
+            )
+            .join(", ")}
+        </span>`
+      : undefined;
+
     return html`
-      <header>${logo} ${this.renderMetadata()}</header>
+      <header>
+        ${logo}
+        <div class="group-data">${this.metadata?.group?.name} ${charity}</div>
+        ${this.renderMetadata()}
+      </header>
+
       ${isPiece(this.currentState)
         ? this.renderNowPlaying(this.currentState)
-        : this.currentState?.stream}
+        : html`<h1>${this.currentState?.stream}</h1>`}
     `;
   }
 }

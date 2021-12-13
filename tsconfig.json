@@ -2,12 +2,13 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "target": "es2020",
-    "module": "esnext",
+    "module": "es2020",
     "allowSyntheticDefaultImports": true,
     "useDefineForClassFields": false,
     "moduleResolution": "node",
     "sourceMap": true,
-    "strict": true
+    "strict": true,
+    "isolatedModules": true
   },
   "exclude": ["node_modules/**"]
 }

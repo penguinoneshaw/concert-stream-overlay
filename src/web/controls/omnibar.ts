@@ -6,7 +6,7 @@ import {
   Group,
   isPiece,
   Piece,
-  PieceOrOtherState,
+  SharedState,
 } from "../../shared/interfaces";
 import "./now_playing";
 
@@ -16,7 +16,7 @@ export class OmniBar extends LitElement {
   public datetime: string | undefined;
 
   @property({ attribute: false, type: Object })
-  public currentState: PieceOrOtherState | undefined;
+  public currentState: SharedState | undefined;
 
   static styles = css`
     :host {
@@ -43,6 +43,15 @@ export class OmniBar extends LitElement {
 
     .metadata {
       text-align: right;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--headings-font-stack);
     }
   `;
 
@@ -90,7 +99,7 @@ export class OmniBar extends LitElement {
       ${logo}
       ${isPiece(this.currentState)
         ? this.renderNowPlaying(this.currentState)
-        : this.currentState?.stream}
+        : html`<h1>${this.currentState?.stream}</h1>`}
       ${this.renderMetadata()}
     `;
   }

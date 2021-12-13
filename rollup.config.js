@@ -3,6 +3,12 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 import pkg from "./package.json";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
+import html from "@web/rollup-plugin-html";
+import { copy } from "@web/rollup-plugin-copy";
+import { terser } from "rollup-plugin-terser";
+import minifyHTML from "rollup-plugin-minify-html-literals";
+import summary from "rollup-plugin-summary";
+import worker from "rollup-plugin-web-worker-loader";
 
 /** @type { import('rollup').RollupOptions[] } */
 const config = [
@@ -11,36 +17,49 @@ const config = [
     output: [
       {
         sourcemap: true,
-        banner: `// ${pkg.name}: ${pkg.version}`,
         dir: "dist/server",
-        esModule: true
+        format: "module",
       },
     ],
     treeshake: true,
-    plugins: [
-      commonjs(),
-      json(),
-      typescript(),
-    ],
+    plugins: [json(), worker(), typescript(), summary()],
+    external: ["http", "path", "fs/promises", ...Object.keys(pkg.dependencies)],
+    preserveEntrySignatures: true,
   },
   {
-    input: "./src/web/index.ts",
+    input: "./src/html/*.html",
     output: [
       {
         sourcemap: true,
         banner: `// ${pkg.name}: ${pkg.version}`,
-        dir: "public/dist/browser",
-        format: "module"
+        dir: "dist/public",
+        format: "module",
       },
     ],
     treeshake: true,
     plugins: [
+      html(),
       nodeResolve({ browser: true, mainFields: ["browser", "module"] }),
       commonjs(),
       json(),
-      typescript({ target: "es6" }),
+      worker(),
+      typescript({ target: "es2019" }),
+      minifyHTML(),
+      terser({
+        ecma: 2020,
+        module: true,
+        warnings: true,
+      }),
+      summary(),
+      copy({
+        patterns: ["*"],
+        rootDir: "./static",
+      }),
+      copy({
+        patterns: "./data/*.yaml",
+      }),
     ],
-    preserveEntrySignatures: true
+    preserveEntrySignatures: true,
   },
 ];
 
