@@ -1083,10 +1083,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"blob-polyfill@npm:^5.0.20210201":
-  version: 5.0.20210201
-  resolution: "blob-polyfill@npm:5.0.20210201"
-  checksum: 4e03bdd01912c18395baabb4add49e0971a9f8f652c5047cf1f0e1c327c6e77c2788f90237b305044e792a1af599d421a9bcbeacc1b608769f1cacadf7a21f44
+"blob-polyfill@npm:^7.0.20220408":
+  version: 7.0.20220408
+  resolution: "blob-polyfill@npm:7.0.20220408"
+  checksum: bbd062e904d851b0e0a733265150d0c189a575f80a98256515d265e265ada6f92a787d43fedaa791c00910c174131f9d7168e8c158e3334c965d045358c177da
   languageName: node
   linkType: hard
 
@@ -1563,12 +1563,12 @@ __metadata:
   linkType: hard
 
 "cross-blob@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "cross-blob@npm:3.0.0"
+  version: 3.0.2
+  resolution: "cross-blob@npm:3.0.2"
   dependencies:
-    blob-polyfill: ^5.0.20210201
-    fetch-blob: ^3.0.1
-  checksum: ae8210fe51d5b62b2dbc67ebd5269ac823b7b0687c59dd2fb63bc970dde41123938d769df285e736c678d934105ed66a1b6c579954e4e54a3bdcf4c2064351b4
+    blob-polyfill: ^7.0.20220408
+    fetch-blob: ^3.2.0
+  checksum: 897f834f6828359c3e00290709c810eb43b11726c6514fe35b06a6036a2ad3a09b2dc0c139888c6db02b3fc369f4b841af79caa2d46f1780a119cd4594472287
   languageName: node
   linkType: hard
 
@@ -2304,12 +2304,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fetch-blob@npm:^3.0.1":
-  version: 3.1.3
-  resolution: "fetch-blob@npm:3.1.3"
+"fetch-blob@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "fetch-blob@npm:3.2.0"
   dependencies:
+    node-domexception: ^1.0.0
     web-streams-polyfill: ^3.0.3
-  checksum: 7be20e9c9a936601c280ef3cfed1968dbcfb35e31564b9bdc807b48de73587cd358b7c3965a3f03483f5268dc373ae8526608947750f22eb214e20c94efab9c1
+  checksum: f19bc28a2a0b9626e69fd7cf3a05798706db7f6c7548da657cbf5026a570945f5eeaedff52007ea35c8bcd3d237c58a20bf1543bc568ab2422411d762dd3d5bf
   languageName: node
   linkType: hard
 
@@ -3682,6 +3683,13 @@ __metadata:
     lower-case: ^2.0.2
     tslib: ^2.0.3
   checksum: 0b2ebc113dfcf737d48dde49cfebf3ad2d82a8c3188e7100c6f375e30eafbef9e9124aadc3becef237b042fd5eb0aad2fd78669c20972d045bbe7fea8ba0be5c
+  languageName: node
+  linkType: hard
+
+"node-domexception@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "node-domexception@npm:1.0.0"
+  checksum: ee1d37dd2a4eb26a8a92cd6b64dfc29caec72bff5e1ed9aba80c294f57a31ba4895a60fd48347cf17dd6e766da0ae87d75657dfd1f384ebfa60462c2283f5c7f
   languageName: node
   linkType: hard
 
