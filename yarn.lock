@@ -507,12 +507,12 @@ __metadata:
   linkType: hard
 
 "@types/koa-static@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "@types/koa-static@npm:4.0.2"
+  version: 4.0.4
+  resolution: "@types/koa-static@npm:4.0.4"
   dependencies:
     "@types/koa": "*"
     "@types/koa-send": "*"
-  checksum: a9c557a37b25a677f3aae084b2afd267fa78a728cd69aec20821d8acca3ef4bda172d1fd16a23711266d97e77962d037ffd25ee76b24608413032226321f461f
+  checksum: 99087a9b6f4214679932008fbed2d4332fca06cd01f2d333439bd1cf0844c313584c8eb6b805360d1c3d6c6c8a475468a5f4f73ecad551c8cc369e290ad41331
   languageName: node
   linkType: hard
 
