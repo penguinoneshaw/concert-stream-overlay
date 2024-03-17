@@ -1520,7 +1520,7 @@ __metadata:
     koa-bodyparser: "npm:^4.3.0"
     koa-static: "npm:^5.0.0"
     lit: "npm:^2.0.2"
-    marked: "npm:^4.0.4"
+    marked: "npm:^4.0.10"
     pdf-merger-js: "npm:^3.2.1"
     puppeteer: "npm:^12.0.1"
     rollup: "npm:^2.60.0"
@@ -3660,12 +3660,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^4.0.4":
-  version: 4.0.4
-  resolution: "marked@npm:4.0.4"
+"marked@npm:^4.0.10":
+  version: 4.3.0
+  resolution: "marked@npm:4.3.0"
   bin:
     marked: bin/marked.js
-  checksum: 8/8f108320ab84d823314a1506f777a20336a2572543c0881abb78156838356eb21cd15f162267cc154620ab031aaf8c9c3a6177b5465de00d954afcbaf5c62164
+  checksum: 10c0/0013463855e31b9c88d8bb2891a611d10ef1dc79f2e3cbff1bf71ba389e04c5971298c886af0be799d7fa9aa4593b086a136062d59f1210b0480b026a8c5dc47
   languageName: node
   linkType: hard
 
