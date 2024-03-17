@@ -3,7 +3,7 @@
 
 __metadata:
   version: 8
-  cacheKey: 10
+  cacheKey: 10c0
 
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
@@ -269,8 +269,8 @@ __metadata:
   linkType: hard
 
 "@rollup/plugin-typescript@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "@rollup/plugin-typescript@npm:8.3.0"
+  version: 8.5.0
+  resolution: "@rollup/plugin-typescript@npm:8.5.0"
   dependencies:
     "@rollup/pluginutils": "npm:^3.1.0"
     resolve: "npm:^1.17.0"
@@ -278,7 +278,10 @@ __metadata:
     rollup: ^2.14.0
     tslib: "*"
     typescript: ">=3.7.0"
-  checksum: 8/f8253a775389f29feadf639c2e04d87bddb4c30126b0d95b9e17bfffa2addad1b6275cb8dead40604348ea7ac0128fe4394413bc3b2129c4a545f93eb4585149
+  peerDependenciesMeta:
+    tslib:
+      optional: true
+  checksum: 10c0/5754571abadf915244bc5b6c62f8aa3f7fe43009a3e9b5a174e11b7f635efbaf379f87fa169914be959d38bea675ab61d380d394d3da637a27f46471f9e47ab6
   languageName: node
   linkType: hard
 
