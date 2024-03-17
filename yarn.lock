@@ -3,7 +3,7 @@
 
 __metadata:
   version: 8
-  cacheKey: 10
+  cacheKey: 10c0
 
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
@@ -388,11 +388,11 @@ __metadata:
   linkType: hard
 
 "@types/dompurify@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "@types/dompurify@npm:2.3.1"
+  version: 2.4.0
+  resolution: "@types/dompurify@npm:2.4.0"
   dependencies:
     "@types/trusted-types": "npm:*"
-  checksum: 8/ba279b3a89239bdeb5edc2ffaadd24eaf8e8e6e3648c8352f92d6bea44e2f4e13d9f0a1ea11f04214548535c1b7fdd721e06a56156f71af2a71b21288059e030
+  checksum: 10c0/a20c4288a067811e097f0b92a0cae927a9c49c0d5de36fea66b85fcc5c8db63a22ac47df37f324e426a01e8ab99ae28ea04260301350bda194850617a26931d6
   languageName: node
   linkType: hard
 
@@ -1722,9 +1722,9 @@ __metadata:
   linkType: hard
 
 "dompurify@npm:^2.3.3":
-  version: 2.3.3
-  resolution: "dompurify@npm:2.3.3"
-  checksum: 8/947e3661681bd183aae1cd08f991b14c6aa41fd188f6c801c5e916c2dc4575bbefbaa121ed06dbe0cb0f595545527d588a44b53bfc35d1cbb898c214dc0d7930
+  version: 2.4.7
+  resolution: "dompurify@npm:2.4.7"
+  checksum: 10c0/c04fa6a7c7276d0bc80e6330f697cfecd96ec1d3964b17de916f26cb0b5b2c9a98ba343d84e759f2b8339e577e619ef3749f3d128ef18ddb8230b09bd2ff3f29
   languageName: node
   linkType: hard
 
