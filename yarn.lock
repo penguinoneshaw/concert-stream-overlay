@@ -814,13 +814,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web/parse5-utils@npm:^1.3.1":
-  version: 1.3.1
-  resolution: "@web/parse5-utils@npm:1.3.1"
+"@web/parse5-utils@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@web/parse5-utils@npm:2.1.0"
   dependencies:
     "@types/parse5": "npm:^6.0.1"
     parse5: "npm:^6.0.1"
-  checksum: 10c0/bdb61d667b0033556378d1fa8e81eaa071b34cb282f7668a8a491f27a86e7f1619365ce6b6d5ac414329658faa13a529f35c1619cb58edd6051b189129000e96
+  checksum: 10c0/9eedec69b38efd0d03640d55584e1ccc24de7818db077bd01420995014aa0bf994bd20616e4b728bc123eaca0c1572b629b29403da4c1a90c71dc91bada58667
   languageName: node
   linkType: hard
 
@@ -833,15 +833,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web/rollup-plugin-html@npm:^1.10.1":
-  version: 1.11.1
-  resolution: "@web/rollup-plugin-html@npm:1.11.1"
+"@web/rollup-plugin-html@npm:^2.0.0":
+  version: 2.2.1
+  resolution: "@web/rollup-plugin-html@npm:2.2.1"
   dependencies:
-    "@web/parse5-utils": "npm:^1.3.1"
-    glob: "npm:^7.1.6"
+    "@web/parse5-utils": "npm:^2.1.0"
+    glob: "npm:^10.0.0"
     html-minifier-terser: "npm:^7.1.0"
+    lightningcss: "npm:^1.24.0"
     parse5: "npm:^6.0.1"
-  checksum: 10c0/88655c533b07a44889c7057c93b1da1a0fd4f3367d110438feda96ce21b7c0cb1397ce8a6ece1f5fd06161483ae93ac42961512e80c533b9098e68662b7bd86d
+  checksum: 10c0/7bd8bcbbfbda7b38dcc4284fca8dacc4f4ebc746224dcd527fb22043dc03d9cf3a0e7d6e9966069ab173eba1c36cf57abd939c5bef93b789ebaf8720f5855cd5
   languageName: node
   linkType: hard
 
@@ -1513,7 +1514,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^5.3.1"
     "@typescript-eslint/parser": "npm:^5.3.1"
     "@web/rollup-plugin-copy": "npm:^0.5.0"
-    "@web/rollup-plugin-html": "npm:^1.10.1"
+    "@web/rollup-plugin-html": "npm:^2.0.0"
     cross-blob: "npm:^3.0.0"
     dompurify: "npm:^2.3.3"
     eslint: "npm:^7.32.0"
@@ -1770,6 +1771,15 @@ __metadata:
   version: 1.0.4
   resolution: "destroy@npm:1.0.4"
   checksum: 8/da9ab4961dc61677c709da0c25ef01733042614453924d65636a7db37308fef8a24cd1e07172e61173d471ca175371295fbc984b0af5b2b4ff47cd57bd784c03
+  languageName: node
+  linkType: hard
+
+"detect-libc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "detect-libc@npm:1.0.3"
+  bin:
+    detect-libc: ./bin/detect-libc.js
+  checksum: 10c0/4da0deae9f69e13bc37a0902d78bf7169480004b1fed3c19722d56cff578d16f0e11633b7fbf5fb6249181236c72e90024cbd68f0b9558ae06e281f47326d50d
   languageName: node
   linkType: hard
 
@@ -3532,6 +3542,106 @@ __metadata:
     prelude-ls: "npm:^1.2.1"
     type-check: "npm:~0.4.0"
   checksum: 8/12c5021c859bd0f5248561bf139121f0358285ec545ebf48bb3d346820d5c61a4309535c7f387ed7d84361cf821e124ce346c6b7cef8ee09a67c1473b46d0fc4
+  languageName: node
+  linkType: hard
+
+"lightningcss-darwin-arm64@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-darwin-arm64@npm:1.24.1"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"lightningcss-darwin-x64@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-darwin-x64@npm:1.24.1"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-freebsd-x64@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-freebsd-x64@npm:1.24.1"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-arm-gnueabihf@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-linux-arm-gnueabihf@npm:1.24.1"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-arm64-gnu@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-linux-arm64-gnu@npm:1.24.1"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-arm64-musl@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-linux-arm64-musl@npm:1.24.1"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-x64-gnu@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-linux-x64-gnu@npm:1.24.1"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"lightningcss-linux-x64-musl@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-linux-x64-musl@npm:1.24.1"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"lightningcss-win32-x64-msvc@npm:1.24.1":
+  version: 1.24.1
+  resolution: "lightningcss-win32-x64-msvc@npm:1.24.1"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"lightningcss@npm:^1.24.0":
+  version: 1.24.1
+  resolution: "lightningcss@npm:1.24.1"
+  dependencies:
+    detect-libc: "npm:^1.0.3"
+    lightningcss-darwin-arm64: "npm:1.24.1"
+    lightningcss-darwin-x64: "npm:1.24.1"
+    lightningcss-freebsd-x64: "npm:1.24.1"
+    lightningcss-linux-arm-gnueabihf: "npm:1.24.1"
+    lightningcss-linux-arm64-gnu: "npm:1.24.1"
+    lightningcss-linux-arm64-musl: "npm:1.24.1"
+    lightningcss-linux-x64-gnu: "npm:1.24.1"
+    lightningcss-linux-x64-musl: "npm:1.24.1"
+    lightningcss-win32-x64-msvc: "npm:1.24.1"
+  dependenciesMeta:
+    lightningcss-darwin-arm64:
+      optional: true
+    lightningcss-darwin-x64:
+      optional: true
+    lightningcss-freebsd-x64:
+      optional: true
+    lightningcss-linux-arm-gnueabihf:
+      optional: true
+    lightningcss-linux-arm64-gnu:
+      optional: true
+    lightningcss-linux-arm64-musl:
+      optional: true
+    lightningcss-linux-x64-gnu:
+      optional: true
+    lightningcss-linux-x64-musl:
+      optional: true
+    lightningcss-win32-x64-msvc:
+      optional: true
+  checksum: 10c0/6fe2cd1bc92d431195ecb8bb9ebb98fc69010c04436354e0493b0a955d81823e6a2b114a4518ab46ad4eefc10606b51ca157adce2909e09e63b21002ccca93d3
   languageName: node
   linkType: hard
 
