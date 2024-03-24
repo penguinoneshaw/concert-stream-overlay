@@ -586,10 +586,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:^4.0.1":
-  version: 4.3.2
-  resolution: "@types/marked@npm:4.3.2"
-  checksum: 10c0/6f44d28da5c940a719d6c6aca41e33f49c5fe957f7972939cc1cbb47d045951f4d969f382d655345d0463e47db1994635d2862018716fcef2fa85ceeceb116e7
+"@types/marked@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/marked@npm:6.0.0"
+  dependencies:
+    marked: "npm:*"
+  checksum: 10c0/1a831af52413b1a208c91539d3bdda9be83d5451dc094c3cbc07e3e07186970673b9ec3ad5edd6c136b1249875c41e22c39eacb3c00ea7c59d0873c35c273035
   languageName: node
   linkType: hard
 
@@ -1510,7 +1512,7 @@ __metadata:
     "@types/koa-bodyparser": "npm:^4.3.4"
     "@types/koa-static": "npm:^4.0.2"
     "@types/koa__router": "npm:^8.0.9"
-    "@types/marked": "npm:^4.0.1"
+    "@types/marked": "npm:^6.0.0"
     "@types/node": "npm:^16.11.7"
     "@typescript-eslint/eslint-plugin": "npm:^5.3.1"
     "@typescript-eslint/parser": "npm:^5.3.1"
@@ -3653,6 +3655,15 @@ __metadata:
     socks-proxy-agent: "npm:^6.0.0"
     ssri: "npm:^8.0.0"
   checksum: 8/0eb371c85fdd0b1584fcfdf3dc3c62395761b3c14658be02620c310305a9a7ecf1617a5e6fb30c1d081c5c8aaf177fa133ee225024313afabb7aa6a10f1e3d04
+  languageName: node
+  linkType: hard
+
+"marked@npm:*":
+  version: 12.0.1
+  resolution: "marked@npm:12.0.1"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/e5c2a4da12dc59351e3e8acd0ca36c11a49f9a538bd0c3bda2dc3c71868f168dd678907184308e6f458eafad0c14146d01841b0644b6ccfcab920c73b814f8d8
   languageName: node
   linkType: hard
 
