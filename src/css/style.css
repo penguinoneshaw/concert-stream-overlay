@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400');
-
-
 body {
+  --background-colour: rebeccapurple;
+  --highlight-colour: white;
+  --headings-font-stack: "Merriweather", display;
+  --font-stack: "Merriweather Sans", sans-serif;
+}
+
+body.fullscreen {
   display: block;
   width: 100vw;
   height: 100vh;
@@ -9,10 +13,6 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  --background-colour: rebeccapurple;
-  --highlight-colour: white;
-  --headings-font-stack: "Merriweather", display;
-  --font-stack: 'Trebuchet MS', sans-serif;
 }
 
 * {

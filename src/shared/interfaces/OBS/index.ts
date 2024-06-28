@@ -27,10 +27,10 @@ export interface OBSBrowser {
   getCurrentScene: (callback: (scene: unknown) => void) => void;
 }
 
-declare global {
-  interface Window {
-    obsstudio?: OBSBrowser;
-  }
-}
+// declare global {
+//   interface Window {
+//     obsstudio?: OBSBrowser;
+//   }
+// }
 
 export const obsStudio = window.obsstudio;

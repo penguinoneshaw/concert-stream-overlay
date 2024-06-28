@@ -15,6 +15,8 @@ export interface Piece extends HasNotes {
   composer?: string;
   arranger?: string;
   lyrics?: string;
+  transcriber?: string;
+  lyricist?: string;
 }
 
 export type SharedState = Piece | OtherState;

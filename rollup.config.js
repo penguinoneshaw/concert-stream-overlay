@@ -1,14 +1,14 @@
-import typescript from "@rollup/plugin-typescript";
-import nodeResolve from "@rollup/plugin-node-resolve";
-import pkg from "./package.json";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
-import html from "@web/rollup-plugin-html";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import terser from "@rollup/plugin-terser";
+import typescript from "@rollup/plugin-typescript";
 import { copy } from "@web/rollup-plugin-copy";
-import { terser } from "rollup-plugin-terser";
-import minifyHTML from "rollup-plugin-minify-html-literals";
+import { rollupPluginHTML as html } from "@web/rollup-plugin-html";
+import { default as minifyHTML } from "rollup-plugin-minify-html-literals";
 import summary from "rollup-plugin-summary";
 import worker from "rollup-plugin-web-worker-loader";
+import pkg from "./package.json" with { type: "json" };
 
 /** @type { import('rollup').RollupOptions[] } */
 const config = [
@@ -44,7 +44,7 @@ const config = [
       json(),
       worker(),
       typescript({ target: "es2019" }),
-      minifyHTML(),
+      minifyHTML.default(),
       terser({
         ecma: 2020,
         module: true,

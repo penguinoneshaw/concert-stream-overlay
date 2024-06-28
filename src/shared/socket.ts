@@ -6,6 +6,7 @@ export interface ServerToClientEvents {
   time: (date: Date) => void;
   concertState: (state: SharedState) => void;
   concertData: (metadata: ConcertMetadata) => void;
+  obsState: (state: Status | undefined) => void;
 }
 
 export interface ClientToServerEvents {

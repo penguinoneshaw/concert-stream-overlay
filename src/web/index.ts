@@ -1,13 +1,24 @@
 import { socket } from "./socket";
 import { OmniBar, Presentation } from "./controls";
-import { map, Observable } from "rxjs";
+import { map, Observable, throttleTime } from "rxjs";
 import { obsStudio } from "../shared/interfaces/OBS";
-import { metadataSubject, stateSubject } from "./store";
+import { gamepadButton$ } from "./joycon";
 
 socket.on("connect", () => {
   if (obsStudio) {
-    obsStudio.getStatus((status) => {
-      socket.emit("obsState", status);
+    const getStatus = () =>
+      obsStudio.getStatus((status) => {
+        socket.emit("obsState", {
+          replayBuffer: false,
+          virtualCam: false,
+          ...status,
+        });
+      });
+    window.addEventListener("obsStreamingStarted", getStatus, {
+      passive: true,
+    });
+    window.addEventListener("obsStreamingStopped", getStatus, {
+      passive: true,
     });
   }
 });
@@ -45,18 +56,26 @@ socket.on("disconnect", (reason) => {
   subscription.unsubscribe();
 });
 
-stateSubject.subscribe((v) => {
-  bar.currentState = v;
-});
-
-metadataSubject.subscribe((v) => {
-  bar.metadata = v;
-});
-
 document.addEventListener("keypress", (ev) => {
   if (ev.key === "f") {
     document.body.requestFullscreen();
   } else if (ev.key === "n") {
     socket.emit("slideState", "next");
+  } else if (ev.key === "p") {
+    socket.emit("slideState", "previous");
+  }
+});
+
+gamepadButton$.pipe(throttleTime(500)).subscribe((v) => {
+  console.log(v);
+  switch (v.value) {
+    case 1:
+    case 15:
+      socket.emit("slideState", "next");
+      break;
+    case 2:
+    case 13:
+      socket.emit("slideState", "prev");
+      break;
   }
 });

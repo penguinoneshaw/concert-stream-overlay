@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { ifDefined } from "lit/directives/if-defined.js";
+import { Subscription } from "rxjs";
 import {
   ConcertMetadata,
   Group,
@@ -8,6 +9,7 @@ import {
   Piece,
   SharedState,
 } from "../../shared/interfaces";
+import { metadataSubject, stateSubject } from "../store";
 import "./now_playing";
 
 @customElement("streamer-omnibar")
@@ -42,6 +44,8 @@ export class OmniBar extends LitElement {
     }
 
     .metadata {
+      font-family: var(--headings-font-stack);
+
       text-align: right;
     }
 
@@ -54,6 +58,30 @@ export class OmniBar extends LitElement {
       font-family: var(--headings-font-stack);
     }
   `;
+
+  private subscriptions: Subscription[] = [];
+
+  connectedCallback(): void {
+    super.connectedCallback();
+    this.subscriptions.push(
+      stateSubject.subscribe((v) => {
+        this.currentState = v;
+      }),
+
+      metadataSubject.subscribe((v) => {
+        this.metadata = v;
+      })
+    );
+  }
+
+  disconnectedCallback(): void {
+    super.disconnectedCallback();
+    for (const subscription of this.subscriptions) {
+      subscription.unsubscribe();
+    }
+
+    this.subscriptions = [];
+  }
 
   @property({ reflect: true, type: Object })
   public metadata?: Partial<ConcertMetadata>;

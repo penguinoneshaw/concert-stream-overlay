@@ -1,11 +1,11 @@
+import KoaRouter from "@koa/router";
 import { createServer } from "http";
 import Koa from "koa";
-import KoaRouter from "@koa/router";
 import KoaBodyParser from "koa-bodyparser";
-import { Server } from "socket.io";
-import { join } from "path";
 import serveStatic from "koa-static";
-import url from "url";
+import { join } from "path";
+import { Server } from "socket.io";
+
 import {
   ClientToServerEvents,
   InterServerEvents,
@@ -14,6 +14,7 @@ import {
 } from "../shared/socket";
 
 import {
+  BehaviorSubject,
   combineLatestWith,
   firstValueFrom,
   from,
@@ -33,10 +34,11 @@ import {
   ConcertMetadata,
   OtherState,
   SharedState,
+  Status,
 } from "../shared/interfaces";
 
-import yaml from "yaml";
 import { readFile, watch } from "fs/promises";
+import yaml from "yaml";
 import { generateNotesPDF } from "./pdf-merge";
 
 const stateBlank: OtherState = {
@@ -125,6 +127,8 @@ async function main() {
     })
   );
 
+  const obsState = new BehaviorSubject<Status | undefined>(undefined);
+
   socket.on("connection", (conn) => {
     conn.data.type = "overlay";
     conn.on("obsState", console.log);
@@ -133,17 +137,19 @@ async function main() {
       metadata.subscribe((next) => {
         conn.emit("concertData", next);
       }),
+      fromEvent(conn, "obsState", (v) => v as Status).subscribe(obsState),
+      fromEvent(conn, "slideState", (v) => v as StateKey).subscribe(
+        stateCommands
+      ),
+      obsState.subscribe((next) => conn.emit("obsState", next)),
     ];
     conn.on("disconnect", () => connections.forEach((v) => v.unsubscribe()));
-    fromEvent(conn, "slideState", (v) => v as StateKey).subscribe(
-      stateCommands
-    );
   });
 
   const publicDir = join(process.cwd(), "public");
 
   app
-    .use(serveStatic(publicDir, { extensions: ["html"] }))
+    .use(serveStatic(publicDir, { extensions: ["html", "ts"] }))
     .use(koaRouter.routes())
     .use(koaRouter.allowedMethods());
 
@@ -157,7 +163,13 @@ async function main() {
   koaRouter.post("state", "/state", async (ctx, next) => {
     const body = ctx.request.body;
     console.log(body);
-    if (body !== {}) stateCommands.next(body.newState);
+    if (
+      body &&
+      typeof body === "object" &&
+      "newState" in body &&
+      typeof body.newState === "string"
+    )
+      stateCommands.next(body.newState);
     ctx.response.status = 200;
     await next();
   });
@@ -166,6 +178,7 @@ async function main() {
     const resultBlob = await generateNotesPDF(
       new URL("/notes", `${ctx.protocol}://${ctx.host}`).toString()
     );
+
     ctx.response.body = resultBlob;
     ctx.response.header["Content-Disposition"] =
       'attachment; filename="notes.pdf"';
@@ -184,7 +197,6 @@ async function main() {
       console.log(`http://127.0.0.1:${addr.port}`);
     }
   });
-
   server.listen(33200);
 }
 

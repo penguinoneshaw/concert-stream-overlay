@@ -1,7 +1,14 @@
 import DOMPurify from "dompurify";
 import { html, render } from "lit";
 import { marked } from "marked";
-import { Concert, isPiece, OtherState, Piece } from "../shared/interfaces";
+import {
+  Concert,
+  OtherState,
+  SharedState,
+  isPiece,
+} from "../shared/interfaces";
+
+import "./controls/presentation";
 
 async function updateState(v: string | number) {
   fetch("/state", {
@@ -10,25 +17,46 @@ async function updateState(v: string | number) {
     headers: { "Content-Type": "application/json" },
   });
 }
-
-const renderPieceNotes = ({
-  title,
-  subtitle,
-  arranger,
-  composer,
-  notes,
-}: Piece) => html`
+function isOtherState(v: SharedState): v is OtherState {
+  return v.type != null && v.type !== "piece";
+}
+const renderPieceNotes = ({ notes, ...piece }: SharedState) => html`
   <article>
     <header>
-      <h1>${title} ${subtitle != null ? `(${subtitle})` : subtitle}</h1>
-      <h2>${composer} ${arranger != null ? `arr. ${arranger}` : undefined}</h2>
-      <button @click=${() => updateState(title)}>Set State</button>
+      ${isPiece(piece)
+        ? html` <streamer-title-block
+            .arranger=${piece.arranger}
+            .composer=${piece.composer}
+            .lyricist=${piece.lyricist}
+            .subtitle=${piece.subtitle}
+            .title=${piece.title}
+            .transcriber=${piece.transcriber}
+          ></streamer-title-block>`
+        : isOtherState(piece)
+        ? html`<h1>${piece.stream ?? piece.type}</h1>`
+        : html`<h1>${piece.type}</h1>`}
     </header>
-    <section
-      .innerHTML="${marked.parse(DOMPurify.sanitize(notes as string), {
-        smartypants: true,
-      })}"
-    ></section>
+
+    <nav>
+      <button
+        @click=${() => {
+          const newState = isPiece(piece) ? piece.title : piece.type;
+          if (newState) updateState(newState);
+        }}
+      >
+        Set State
+      </button>
+    </nav>
+    ${notes
+      ? html`<section
+          .innerHTML="${marked.parseInline(
+            DOMPurify.sanitize(notes as string),
+            {
+              async: false,
+            }
+          )}"
+        ></section>`
+      : undefined}
   </article>
 `;
 
@@ -39,9 +67,7 @@ const renderPieceNotes = ({
     const metadata: Concert = await metadataFetch.json();
     const generalElements = html`<nav>
       ${metadata.running_order
-        .filter<OtherState>(function (v): v is OtherState {
-          return v.type != null && v.type !== "piece";
-        })
+        .filter<OtherState>(isOtherState)
         .map(
           ({ type, controls, stream }: OtherState) =>
             html`<button @click=${async () => await updateState(type)}>
@@ -50,9 +76,7 @@ const renderPieceNotes = ({
         )}
     </nav>`;
 
-    const metaElements = metadata.running_order
-      .filter<Piece>(isPiece)
-      .map(renderPieceNotes);
+    const metaElements = metadata.running_order.map(renderPieceNotes);
 
     render([generalElements].concat(metaElements), document.body);
   }

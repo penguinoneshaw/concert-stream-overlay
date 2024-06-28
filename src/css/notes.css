@@ -1,10 +1,11 @@
 html {
-  font-size: 100%;
+  font-size: 12pt;
 } /*16px*/
 
 body {
   background: white;
   font-family: var(--font-stack);
+  --highlight-colour: rebeccapurple !important;
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
@@ -33,19 +34,42 @@ h1 {
   font-size: 1.802rem;
 }
 
-h2 {font-size: 1.602rem;}
+h2 {
+  font-size: 1.602rem;
+}
 
-h3 {font-size: 1.424rem;}
+h3 {
+  font-size: 1.424rem;
+}
 
-h4 {font-size: 1.266rem;}
+h4 {
+  font-size: 1.266rem;
+}
 
-h5 {font-size: 1.125rem;}
+h5 {
+  font-size: 1.125rem;
+}
 
-small, .text_small {font-size: 0.889rem;}
+small,
+.text_small {
+  font-size: 0.889rem;
+}
 
 article {
   margin-block: 2ex;
-  border-block: solid thick var(--background-colour);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 1em 0;
+  gap: 1em;
+}
+
+button {
+  flex-grow: 1;
 }
 
 @media print {
@@ -56,6 +80,9 @@ article {
     margin: 1.5cm;
     width: auto;
     height: auto;
+  }
+  nav {
+    display: none;
   }
   article {
     break-after: page;

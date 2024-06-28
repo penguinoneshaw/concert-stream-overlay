@@ -1,183 +1,133 @@
-name: "Winter Concert"
+name: "Spring Concert"
 group:
   name: "Edinburgh University Female Voice Choir"
   logo: "logo.jpg"
-date: "2021-12-05T15:00:00.000Z"
+date: "2022-04-08T19:00:00.000Z"
 charity:
   - name: Edinburgh Rape Crisis Centre
     registrationNumber: SC006208
 running_order:
-  - title: The Wellerman
-    composer: New Zealand Folksong
-    arranger: Roger Emerson
+  - title: An Eriskay Love Lilt
+    composer: Traditional
+    transcriber: Marjorie Kennedy-Fraser
+    lyricist: Traditional/Rev. Kenneth MacLeod
+    arranger: James Shaw
     notes: |
-      Thank you all for coming to this, the 2021 Winter Concert of Edinburgh University Female Voice Choir.
-      I am delighted to be able to share with you the result of this group's hard work from the last eight weeks after our long hiatus of the last eighteen months.
+      Thank you all for coming this evening to the Spring Concert of the Edinburgh University Female Voice Choir.
+      We are delighted to share with you our work from this semester, which spans the musical spectrum of style and seriousness.
 
-      Our first piece was The Wellerman, a maritime folk song originally from New Zealand about a whaling ship for the prolific 'Weller Brothers'. 
-      2020 came along with many surprises, but one of the greatest of those for me was the sudden surge in the popularity of the sea shanty, or sea song, on TikTok.
-      The Wellerman was the one that 'made it', with the version by Glasgow based Nathan Evans and others released early this year reaching number one in UK singles chart.
+      We started with a Scottish folk song from the Western Isles, 'An Eriskay Love Lilt'.
+      It was collected in 'From the Hebrides: Further Gleanings of Tale and Song' in 1925 by the University of Edinburgh-based academic Marjorie Kennedy-Fraser, and the original wax-cylinder recording is still held by the university's Scottish Studies department.
+      Kennedy-Fraser wrote the piano accompaniment herself to go with the song she recorded sung by a Mary MacInnes.
 
-  - title: Dancing Queen
-    composer: Benny Andersson, Björn Ulvaeus and Stig Anderson
-    arranger: Roger Emerson
+      Eriskay is a small island of only three square miles, off the coast of South Uist in the Outer Hebrides.
+      A lilt, incidentally, is defined by its use of nonsense syllables, here to sound like Gaelic.
+
+      Fans of Edinburgh University Wind Band's tour repertoire will have recognised it as the second movement from Clare Grundman's 'Hebrides Suite'.
+      I have always loved that treatment of the song, and was inspired to make this arrangement as a result.
+
+  - title: Somewhere Only We Know
+    composer: Tim Rice-Oxley, Richard Hughes & Tom Chaplin
+    arranger: Stuart McSweeney
     notes: |
-      Now we go back from 2021 all the way back to 1976. 
-      The Summer Olympics were held in Montréal and the winter olympics in Innsbruck, the intercity 125 trains were first run on British rails, the UK and Iceland finally stopped arguing over fishing (for the time being), and the Viking program was on the utopia planitia on Mars - which I genuinely thought was a place made up for Star Trek - giving us colour photos of the surface of Mars for the first time.
-      At the same time, in what is now the Democratic Republic of the Congo, the Ebola virus was breaking out for the first time.
-      The past, as Douglas Adams put it, is really like a foreign country.
-      They do things exactly the same there.
+      We now move on to a piece which is much newer.
+      Recorded originally by the band Keane in 2004, and then by Lily Allen in 2013, 'Somewhere Only We Know' describes returning to a place previously well known.
+      The precise meaning is unknown, with Keane's drummer saying of it
 
-      Also, as it happens, in August 1976, ABBA released the song Dancing Queen.
-      To borrow from Wikipedia, it became ABBA's only number one hit in the United States, and topped the charts in Australia, Canada, the Netherlands, Belgium, Ireland, Mexico, New Zealand, Norway, South Africa, Spain, Sweden, the United Kingdom, Germany and what is now Zimbabwe.
-      It was so popular, it was performed in 1976 at the pre-wedding gala of King Carl the 16th Gustav of Sweden and his wife-to-be Silvia, and then again at the latter's 50th birthday in 1993.
+      > We've been asked whether "Somewhere Only We Know" is about a specific place, and Tim has been saying that, for him, or us as individuals, it might be about a geographical space, or a feeling; it can mean something individual to each person, and they can interpret it to a memory of theirs...
+      > It's perhaps more of a theme rather than a specific message...
+      > Feelings that may be universal, without necessarily being totally specific to us, or a place, or a time...
 
-      In August, the music video was rereleased in 4K, which is an experience in itself.
-      Our arrangement is by Roger Emerson.
+      For me, that memory is very specifically of the 16th March 2020, when we, the university clarinet choir, held what turned out to be our last rehearsal before lockdown.
+      We recorded the music we'd been preparing for that semester's concert, and this was in it.
+      Ever since, when I hear it, it reminds me of feeling of uncertainty and confusion around that time, and the relief when we were able to meet again a year later.
+      Others less esoterically associate the song with the 2013 John Lewis Christmas advert.
 
-      Enjoy.
-  - title: Fix You
-    composer: Guy Berryman, Jon Buckland, Will Champion and Chris Martin
-    arranger: Adam Anders and Peter Astrom
+      Either way, I love this song.
+
+  - title: Your Song
+    composer: Elton John & Bernie Taupin
+    arranger: Mac Huff
     notes: |
-      Moving on to 2005, and the album 'X & Y' by Coldplay.
-      Unless you've been living under a rock since then, which is a fair thing to do but is fairly unlikely, you'll have heard the song 'Fix You' by Coldplay.
+      Elton John, force of nature that he is, wrote the next item in 1970 alongside lyricist Bernie Taupin.
+      The lyrics tell of a strightforward love, with occasional non-sequiturs coming from the narrator stumbling over his words.
+      It has been covered by artists from Rod Stewart to Ewan McGregor, and features prominently in the film Gnomeo and Juliet.
 
-      This arrangement is from the TV show Glee, and features Charlotte Noonan, Catrin Roulston, Mariam Momjian and Helen Wieland as soloists.
+      This rendition will be less silly, but our gift is our song, and this one's for you.
 
-      Chris Martin, lead singer of the band, wrote the song to help his then-wife Gwyneth Paltrow process the death of her father, which had happened three weeks before they met.
-
-      This time of year can be hard for many, in the run up to the various winter festivals, as the grief that is usually there in a deep part of you is brought back to the surface by missing people at Christmas events which carry on.
-      In my case, we lost a very dear friend of mine in May this year, not to the coronavirus but it was still a complete surprise.
-      We lost my dad twenty-four years ago tomorrow to cancer.
-      I'm sure others in the choir will have similar experiences.
-      Life goes on, as it does for us all, just not quite as brightly as it could do otherwise.
-
-      The song tries to emphasise through lyrics and structure that the pain does ease, even when you lose something that you can't replace. 
-      We won't try to fix you, but this might help a bit.
-  - title: Do You Hear What I Hear
-    composer: Noël Regney and Gloria Shayne
-    arranger: Mark Brymer
+  - title: So Much Better
+    subtitle: "From “Legally Blonde: The Musical”"
+    composer: Laurence O'Keefe & Nell Benjamin
+    arranger: Mac Huff
     notes: |
-      Written during the Cuban Missile Crisis, 'Do You Hear What I Hear' mixes various bits of the Christmas story together in a plea for peace about the conflict. The composers, Gloria Shayne-Baker and her then-husband Noël Regney, whose original name Léon Schlienger he reversed when he moved to the US from France having been in the Resistance during the second world war, were originally reticent to write the song due to the increasing commercialisation of Christmas.
+      I, entirely unironically, refer to 'Legally Blonde: The Musical' as the most Musical of Musicals.
+      It's powerfully Positive.
 
-      The song was subsequently covered by artists from Perry Como to Johnny Cash, and now by us.
-  - title: Silent Night
-    composer: Joseph Mohr, John F. Young and Franz X. Gruber
-    lyrics: |
-      Silent night, holy night!  
-      All is calm, all is bright.  
-      Round yon Virgin, Mother and Child.  
-      Holy infant so tender and mild,  
-      Sleep in heavenly peace,  
-      Sleep in heavenly peace
+      There's a phenomenon I find very frustrating in music written for female voice choirs that there's medleys with titles like "GIRL POWER!" which are almost universally full of vacuous love songs written by men.
+      This is not that, it's so much better.
+      Reviewers saw it and smelt Blood in the Water, referring to it as "a great big empty vessel of a show that makes a lot of noise and not much else, and would have been better entitled 'Irredeemably Bland'", "high-energy, empty-calories, and expensive-looking hymn to the glories of girlishness", and "amorphous, synthetic, and maniacally empty-headed music".
+      I don't think they quite understood that that's What You Want from something like this, that art doesn't have to be Serious.
+      There's a scene where the entire cast is required to perform a fitness tape while singing and skipping, pausing when the tape is.
+      It's utterly exhausting to watch live, but you can't help but be swept along with it.
 
-      Silent night, holy night!  
-      Shepherds quake at the sight.  
-      Glories stream from heaven afar  
-      Heavenly hosts sing Alleluia,  
-      Christ the Savior is born!  
-      Christ the Savior is born
+      'So Much Better' comes at a point where the protagonist has got into Harvard to do law to follow the man who had left her because he thought she wasn't serious enough, and realised that she actually has a knack for it.
+      It speaks of building confidence while also being yourself.
 
-      Silent night, holy night!  
-      Son of God love's pure light.  
-      Radiant beams from Thy holy face  
-      With dawn of redeeming grace,  
-      Jesus Lord, at Thy birth  
-      Jesus Lord, at Thy birth
-    notes: |
-      To take us into the interval, we now invite you to join in!
-      Silent Night was written in 1818 by Franz Xaver Gruber and Joseph Mohr at a church near Salzburg in Austria.
-      The church was flooded (quite the feat given how mountainous that area is), and the organ potentially ruined, so it was written for guitar.
-      We just have Evie at the piano, but hopefully on this, the second Sunday of Advent, we can help you start getting into the Christmas spirit.
+      Legally Blonde has just been announced for a revival in London next month in Regent's Park theatre featuring a diverse cast and promises to be every bit as fabulous that the source material requires.
+      This evening, we feature Mariam, Freya and Livy as soloists, and we hope we leave you feeling so much better than before.
+
   - type: State-Interval
     stream: Interval
-  - title: Bohemian Rhapsody
-    composer: Freddie Mercury
-    arranger: Mark Brymer
     notes: |
+      <LIVY SPEAKS>
 
-      "Bohemian Rhapsody" is something of a cultural icon. Written for Queen's 1975 album "A Night At The Opera", it is the only song to reach the UK Christmas number one twice by the same artist and is the third bestselling single of all time.
+  - title: Make You Feel My Love
+    composer: Bob Dylan
+    arranger: Jeremy Birchall & Christopher Hussey
+    notes: |
+      Folk rock legend Bob Dylan wrote our next song for his 1997 album 'Time Out of Mind', but was beaten to releasing it by Billy Joel.
+      Its most famous cover is by Adele on her debut album 19, which she was originally resistant to recording because of the implication that she wasn't able to write enough songs to fill an album.
 
-      It was famously very difficult to sing live, due to the recording's heavily multi-tracked nature. It took three weeks to sing originally, battling the technology at the time's ability to only layer twenty-four tracks at once. Given sections contained 180 different layered recordings, the undertaking was immense.
+      Through a jazz-like but laid back chord progression, 'Make You Feel My Love' portrays a caring and emotional love, rooted in the need to make the narrator's affection felt.
+      I hope we'll do it justice.
 
-      The song is split into five approximate sections. Firstly, an introduction in a close harmony style, expressing a general sense of nihilistic despair. Then follows a ballad, for us sung by Emily Combs. The third section mimics an operatic style akin to Mozart detailing the narrator's descent into hell, fought over by the likes of Figaro from the Barber of Seville and Gallileo Galilei. 
-      The fourth section is best known outside of its original context as the headbanging section from the film "Wayne's World", and then it ends back where it started, in close harmony but somewhat different from before.
-
-      This year marks the 30th anniversary of Freddie Mercury's death, and we hope that we can do this, one of his many master works, the justice it deserves.
   - type: State-Raffle
     stream: Raffle
-  - title: How Far I'll Go
-    composer: Lin-Manuel Miranda
-    arranger: Ed Lojeski
+
+  # - title: Requiem
+  #   subtitle: From "Dear Evan Hansen"
+  #   composer: Justin Paul
+  #   performer: Diana Coroiu
+  #   notes: |
+  #     Depends on what Diana chooses to play
+
+  - title: Bridge Over Troubled Water
+    composer: Paul Simon
+    arranger: Mark Hayes
     notes: |
-      The 2016 Disney film Moana explores the traditions of a pacific island culture through the lens of the sixteen-year old daughter of the chief of the island. She learns of her people's sea-faring ancestry and feels drawn in two directions - towards her home and family, and out onto the water. 
-      The music and lyrics are written by Lin-Manuel Miranda, who claims that he went 'full method' when writing the score to get into the mind of the character, barricading himself in his childhood bedroom.
-      "How Far I'll Go" expresses Moana's need to explore, and find herself, tempered by the ties that bind her to her home.
-  - title: I'll Be Home For Christmas
-    composer: Kim Gannon and Walter Kent
-    arranger: Ed Lojeski
+      Long-term followers of the choir will know that I took over *temporarily* after the Joint Societies ceilidh in 2020 as they had been left in a bind, having not had a consistent MD since the beginning of the academic year.
+      We didn't manage to have that concert, but one of the songs in the programme was this.
+
+      Still here, we're finally performing it, with it bridging the troubled coronavirus waters to our current more stable place.
+
+  - title: Help!
+    composer: John Lennon & Paul McCartney
+    arranger: Andrew Emmet
+
     notes: |
-      I spent Christmas Day 2021 here in Edinburgh, the first time in my life not surrounded by family in some way.
-      I hadn't actually planned to go home, given the way the wind was blowing, and the exploding coronavirus case numbers, but it was still a difficult decision to make.
-      We played a board game remotely over a video call while either side cooked separate lunches.
-      My mother, ever supportive, acted horrified that I asked for advice on how to make a Yorkshire pudding.
-      A friend, who had been stranded here by safety concerns around the alpha variant, came round to eat.
+      We now end with 'Help!', by the Beatles, featuring our alto section and our treasurer Mariam as soloist.
+      Before we do, however, we have some admin to do.
 
-      It was Christmas, complete with (virtual) midnight mass courtesy of Marchmont St Giles, family board games and more food than was perhaps reasonable.
-      It just felt... wrong.
+      ### Thanks
 
-      With many similarly forced to spend the festive period far from home and the usual activities by circumstance, it's perhaps unsurprising that "I'll Be Home For Christmas" managed to chart again in the US in January 2021.
-      Its melancholy tone of wishing to be home, surrounded by all the regular trappings, resonated unexpectedly with the developing situation around the 2020 Christmas period.
+      - Thank you everyone for coming to support us here in person, and to watch online.
+      - The committee
+      - The choir
+      - Diana
 
-      "I'll Be Home For Christmas" was originally written to honour American soldiers fighting abroad in 1943, and was Bing Crosby's fifth gold record. It was banned by the BBC from broadcast, worrying that it might lower morale.
+      ### Plugs
 
-      Hopefully, this year, being where we want to be over the end of year festivals won't only be in our dreams.
-  - subtitle: Feed The World
-    title: Do They Know It's Christmas
-    composer: Bob Geldof and Midge Ure
-    lyrics: |
-      It's Christmas time  
-      There's no need to be afraid  
-      At Christmas time  
-      We let in light and we banish shade
-
-      And in our world of plenty  
-      We can spread a smile of joy  
-      Throw your arms around the world  
-      At Christmas time
-
-      But say a prayer  
-      Pray for the other ones  
-      At Christmas time  
-      It's hard, but when you're having fun
-
-      There's a world outside your window  
-      And it's a world of dread and fear  
-      Where the only water flowing  
-      Is the bitter sting of tears
-
-      And the Christmas bells that ring there  
-      Are the clanging chimes of doom  
-      Well, tonight thank God it's them  
-      Instead of you
-
-      And there won't be snow in Africa this Christmas time  
-      The greatest gift they'll get this year is life (oh)  
-      Where nothing ever grows, no rain nor rivers flow  
-      Do they know it's Christmas time at all?
-
-      (Here's to you) Raise a glass for everyone  
-      (Here's to them) Underneath that burning sun  
-      Do they know it's Christmas time at all?
-
-      Feed the world  
-      Let them know it's Christmas time again (x3)
-    notes: |
-      Thank you everyone for coming to support us here in person, and to watch online.
-      It means a lot to us.
-
-      *MORE TALKING FROM ME AND LIVY*
-
-      We come to the end, and more participation from you!
-      Please stand, if you are able (it helps with breathing), and join in with 'Do They Know It's Christmas'.
+      - Clarinet Choir was last week, but the livestream is online.
+      - Wind band is... right now.
+      - Brass band is tomorrow at 7:30pm in the Reid Concert Hall
+      - Afterparty?

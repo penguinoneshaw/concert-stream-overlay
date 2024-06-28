@@ -13,10 +13,12 @@ export class NowPlaying extends LitElement {
       text-align: center;
       display: inline-flex;
       flex-direction: column;
+      font-family: var(--font-stack);
     }
     .title {
-      font-size: 18pt;
-      font-weight: bold;
+      font-size: 1.5em;
+      font-family: var(--headings-font-stack);
+      font-weight: 700;
     }
   `;
 
