@@ -770,12 +770,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.11.5":
-  version: 18.19.43
-  resolution: "@types/node@npm:18.19.43"
+"@types/node@npm:^20.0.0":
+  version: 20.14.14
+  resolution: "@types/node@npm:20.14.14"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/b8ee19ecf9864f0afef8edc92d65e7f57d7b6ac5b756f0a2b49063899a82ecd6ba05f1eeca854644451e7777b9c1894f3049608e468991d44f2ea0c09d3b3184
+  checksum: 10/035bc347e3de04888d537801e23eb4b4f99522975ca002dbfef978edd853710031b7cd43bf022670d6aba4ed5d4ac75ea1b5ff77ff8f80998bffd943b7bcef48
   languageName: node
   linkType: hard
 
@@ -1681,7 +1681,7 @@ __metadata:
     "@types/koa-bodyparser": "npm:^4.3.10"
     "@types/koa-static": "npm:^4.0.2"
     "@types/koa__router": "npm:^12.0.0"
-    "@types/node": "npm:^18.11.5"
+    "@types/node": "npm:^20.0.0"
     "@types/obs-studio": "npm:^2.17.0"
     "@types/puppeteer": "npm:^7.0.4"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
