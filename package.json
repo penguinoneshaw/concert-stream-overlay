@@ -52,7 +52,7 @@
     "koa-bodyparser": "^4.4.1",
     "koa-static": "^5.0.0",
     "lit": "^3.1.2",
-    "marked": "^12.0.0",
+    "marked": "^15.0.0",
     "pdf-merger-js": "^5.1.1",
     "puppeteer": "^23.0.0",
     "rxjs": "^7.8.0",
