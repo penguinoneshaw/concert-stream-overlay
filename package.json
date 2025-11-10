@@ -44,7 +44,7 @@
   },
   "packageManager": "yarn@4.10.3",
   "dependencies": {
-    "@koa/router": "^12.0.0",
+    "@koa/router": "^14.0.0",
     "@lit/task": "^1.0.1",
     "cross-blob": "^3.0.2",
     "dompurify": "^3.0.9",
